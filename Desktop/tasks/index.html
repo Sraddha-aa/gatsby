@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/108700199d84132d886c6833/script.js"></script> <!-- End cookieyes banner -->
+ 
+ <!-- Start cookieyes banner 
+  <script id="cookieyes" type="text/javascript" src="https://scriptstaging.cookieyes.com/client_data/d8020c6475110ffe103fe8a2/script.js"></script>
+  End cookieyes banner -->
+
+  <!-- Google Tag Manager 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K3NXNPTH');</script>
+  End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49PDW3Q789"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-49PDW3Q789');
+</script>
+  <meta charset="utf-8">
+  <title>Todo list app</title>
+  <meta name="viewport" content="width=device-width, initial scale=1">
+  <link rel="stylesheet" href= "newcss/first.css"> 
+
+  <!-- Hotjar Tracking Code for https://www.todo.com -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3591784,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3NXNPTH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   End Google Tag Manager (noscript) -->
+
+  <div class="container">
+    <div class="todo-app">
+      <h2> To-do list <img src="../tasks/taskimages/todo.png"> </h2>
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Add items">
+        <button type="button" onclick="addTask()">Add</button>
+      </div>
+      <ul id="list-container">
+      <!-- <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li>   -->
+      </ul>
+   </div>
+  </div>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/SBmSRK3feww" title="YouTube video player"
+     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ 
+    
+    <iframe src="https://player.vimeo.com/video/748415552?h=bf0514d1e6" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div> 
+  <nav>
+    <ul>
+     <li><a href="index.html">home</a></li>
+     <li><a href="example.html">contact us</a></li>
+     <li><a href="chat.html">portfolio</a></li>
+    </ul>
+  </nav>
+ 
+ <script>
+
+
+ const inputBox = document.getElementById("input-box");
+ const listContainer = document.getElementById("list-container");
+
+ function addTask(){
+   if (inputBox.value === ""){
+     alert("You must write something!");
+    }
+   else{
+      let li= document.createElement("li");
+      li.innerHTML = inputBox.value;
+      listContainer.appendChild(li); 
+      let span= document.createElement("span");
+      span.innerHTML = "\u00d7";
+      li.appendChild(span);
+     }
+      inputBox.value = "";
+ }
+
+ listContainer.addEventListener("click", function(e){
+  if(e.target.tagName === "LI"){
+    e.target.classList.toggle("checked");
+  }
+  else if(e.target.tagName === "SPAN"){
+    e.target.parentElement.remove();
+  }
+ },
+  false);
+
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      
+
